@@ -26,7 +26,6 @@ mcp = FastMCP("Secure Google MCP Server", auth=verifier)
 def whoami() -> dict:
     "Returns the userid of the current authenticated user"
     token = get_access_token()
-    print("\n\n", token, "\n\n")
     return {
         "client_id": token.client_id,
         **token.claims
